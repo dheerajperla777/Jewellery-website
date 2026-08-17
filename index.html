@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Aurelia Jewels</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+          rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <!-- Logo -->
+
+        <div class="logo">
+
+            SOUMITHA
+
+            <span>JEWELS</span>
+
+        </div>
+
+
+        <!-- Search -->
+
+        <div class="search">
+
+            <span>🔍</span>
+
+            <input
+                id="searchInput"
+                type="text"
+                placeholder="Search jewellery..."
+                oninput="searchProducts()">
+
+        </div>
+
+
+        <!-- Header Icons -->
+
+        <div class="icons">
+
+            <button onclick="addWish()">
+                ♡
+            </button>
+
+            <button onclick="openAccount()">
+                👤
+            </button>
+
+            <button onclick="openCart()">
+                🛍
+                <span id="cartCount">0</span>
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <nav id="navigation">
+
+        <a href="#collections">
+            Collections
+        </a>
+
+        <a href="#wedding">
+            Wedding
+        </a>
+
+        <a href="#gifting">
+            Gifting
+        </a>
+
+        <a href="#products">
+            Rings
+        </a>
+
+        <a href="#products">
+            Earrings
+        </a>
+
+        <a href="#products">
+            Necklaces
+        </a>
+
+        <a href="#products">
+            Bangles
+        </a>
+
+        <a href="#products">
+            Mangalsutra
+        </a>
+
+        <a href="#products">
+            New Arrivals
+        </a>
+
+    </nav>
+
+
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section class="hero">
+
+
+        <!-- Slide 1 -->
+
+        <div class="slide active">
+
+            <div class="hero-content">
+
+                <p class="eyebrow">
+                    THE FESTIVE EDIT
+                </p>
+
+                <h1>
+                    Jewels that
+                    <br>
+                    <em>tell your story.</em>
+                </h1>
+
+                <p>
+                    Timeless designs crafted
+                    for your most beautiful
+                    moments.
+                </p>
+
+                <button
+                    onclick="showProducts('All')">
+
+                    SHOP NOW
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Slide 2 -->
+
+        <div class="slide">
+
+            <div class="hero-content">
+
+                <p class="eyebrow">
+                    EVERYDAY LUXURY
+                </p>
+
+                <h1>
+                    Shine in
+                    <br>
+                    <em>every chapter.</em>
+                </h1>
+
+                <p>
+                    Modern jewellery made
+                    to move with you.
+                </p>
+
+                <button
+                    onclick="showProducts('Earrings')">
+
+                    EXPLORE
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Slide 3 -->
+
+        <div class="slide">
+
+            <div class="hero-content">
+
+                <p class="eyebrow">
+                    BRIDAL COLLECTION
+                </p>
+
+                <h1>
+                    For the
+                    <br>
+                    <em>forever kind of love.</em>
+                </h1>
+
+                <p>
+                    Celebrate your forever
+                    with handcrafted classics.
+                </p>
+
+                <button
+                    onclick="showProducts('Necklaces')">
+
+                    DISCOVER
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Carousel Dots -->
+
+        <div class="dots">
+
+            <button
+                class="dot active"
+                onclick="setSlide(0)">
+            </button>
+
+            <button
+                class="dot"
+                onclick="setSlide(1)">
+            </button>
+
+            <button
+                class="dot"
+                onclick="setSlide(2)">
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= COLLECTIONS ================= -->
+
+    <section
+        class="section"
+        id="collections">
+
+
+        <div class="section-head">
+
+            <div>
+
+                <p class="eyebrow">
+                    CURATED FOR YOU
+                </p>
+
+                <h2>
+                    Discover Our Collections
+                </h2>
+
+            </div>
+
+
+            <button
+                class="text-button"
+                onclick="showProducts('All')">
+
+                View All →
+
+            </button>
+
+        </div>
+
+
+
+        <div class="categories">
+
+
+            <!-- Earrings -->
+
+            <button
+                onclick="showProducts('Earrings')">
+
+                <span class="category-circle">
+                    ✦
+                </span>
+
+                <b>
+                    Earrings
+                </b>
+
+            </button>
+
+
+
+            <!-- Necklaces -->
+
+            <button
+                onclick="showProducts('Necklaces')">
+
+                <span class="category-circle">
+                    ◊
+                </span>
+
+                <b>
+                    Chain Pendant
+                </b>
+
+            </button>
+
+
+
+            <!-- Handbags -->
+
+            <button
+                onclick="showProducts('Handbags')">
+
+                <span class="category-circle">
+                    ◇
+                </span>
+
+                <b>
+                    Handbags
+                </b>
+
+            </button>
+
+
+
+            <!-- Bangles -->
+
+            <button
+                onclick="showProducts('Bangles')">
+
+                <span class="category-circle">
+                    ◎
+                </span>
+
+                <b>
+                    Bangles
+                </b>
+
+            </button>
+
+
+
+            <!-- Rings -->
+
+            <button
+                onclick="showProducts('Rings')">
+
+                <span class="category-circle">
+                    ◌
+                </span>
+
+                <b>
+                    Finger Rings
+                </b>
+
+            </button>
+
+
+
+            <!-- Mangalsutra -->
+
+            <button
+                onclick="showProducts('Mangalsutra')">
+
+                <span class="category-circle">
+                    ●
+                </span>
+
+                <b>
+                    Mangalsutra
+                </b>
+
+            </button>
+
+
+
+            <!-- Necklaces -->
+
+            <button
+                onclick="showProducts('Necklaces')">
+
+                <span class="category-circle">
+                    ✧
+                </span>
+
+                <b>
+                    Necklaces
+                </b>
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= WEDDING SECTION ================= -->
+
+    <section
+        class="wedding"
+        id="wedding">
+
+
+        <div class="wedding-content">
+
+            <p class="eyebrow">
+                MADE FOR MILESTONES
+            </p>
+
+            <h2>
+
+                Say yes to
+                <br>
+                <em>forever.</em>
+
+            </h2>
+
+            <p>
+
+                From intimate ceremonies
+                to grand celebrations,
+                discover pieces designed
+                to become part of your story.
+
+            </p>
+
+            <button
+                onclick="showProducts('Necklaces')">
+
+                EXPLORE WEDDING
+
+            </button>
+
+        </div>
+
+
+        <div class="wedding-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?auto=format&fit=crop&w=1100&q=85"
+                alt="Gold jewellery">
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= TRENDING LOOKS ================= -->
+
+    <section
+        class="section"
+        id="gifting">
+
+
+        <div class="section-head">
+
+            <div>
+
+                <p class="eyebrow">
+                    STYLE IN MOTION
+                </p>
+
+                <h2>
+                    Trending Looks
+                </h2>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="reels">
+
+
+            <div class="reel">
+
+                <img
+                    src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=650&q=80"
+                    alt="Gold earrings">
+
+                <span>
+                    Layered Gold
+                </span>
+
+            </div>
+
+
+
+            <div class="reel">
+
+                <img
+                    src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=650&q=80"
+                    alt="Jewellery">
+
+                <span>
+                    Minimal Pearls
+                </span>
+
+            </div>
+
+
+
+            <div class="reel">
+
+                <img
+                    src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=650&q=80"
+                    alt="Ring">
+
+                <span>
+                    Statement Rings
+                </span>
+
+            </div>
+
+
+
+            <div class="reel">
+
+                <img
+                    src="https://images.unsplash.com/photo-1596944924616-7b38e7cfac36?auto=format&fit=crop&w=650&q=80"
+                    alt="Jewellery">
+
+                <span>
+                    Festive Glow
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= PRODUCTS ================= -->
+
+    <section
+        class="products-section"
+        id="products">
+
+
+        <div class="product-title">
+
+            <div>
+
+                <p class="eyebrow">
+                    THE AURELIA EDIT
+                </p>
+
+                <h2>
+                    Necklace Sets & More
+                </h2>
+
+            </div>
+
+
+            <!-- Sorting -->
+
+            <select
+                id="sort"
+                onchange="renderProducts()">
+
+                <option value="latest">
+                    Sort: Latest
+                </option>
+
+                <option value="priceLow">
+                    Price: Low to High
+                </option>
+
+                <option value="priceHigh">
+                    Price: High to Low
+                </option>
+
+                <option value="popular">
+                    Popularity
+                </option>
+
+            </select>
+
+        </div>
+
+
+
+        <!-- Product Layout -->
+
+        <div class="catalog">
+
+
+            <!-- ================= FILTERS ================= -->
+
+            <aside>
+
+                <h3>
+                    FILTERS
+                </h3>
+
+
+                <!-- Category -->
+
+                <label>
+                    Category
+                </label>
+
+                <select
+                    id="categoryFilter"
+                    onchange="renderProducts()">
+
+                    <option value="All">
+                        All
+                    </option>
+
+                    <option value="Earrings">
+                        Earrings
+                    </option>
+
+                    <option value="Necklaces">
+                        Necklaces
+                    </option>
+
+                    <option value="Rings">
+                        Rings
+                    </option>
+
+                    <option value="Bangles">
+                        Bangles
+                    </option>
+
+                    <option value="Mangalsutra">
+                        Mangalsutra
+                    </option>
+
+                    <option value="Handbags">
+                        Handbags
+                    </option>
+
+                </select>
+
+
+
+                <!-- Price -->
+
+                <label>
+                    Price Range
+                </label>
+
+                <input
+                    id="priceRange"
+                    type="range"
+                    min="1000"
+                    max="50000"
+                    step="500"
+                    value="50000"
+                    oninput="
+                    updatePrice();
+                    renderProducts();
+                    ">
+
+                <p class="range">
+
+                    Up to
+
+                    <b id="priceValue">
+                        ₹50,000
+                    </b>
+
+                </p>
+
+
+
+                <!-- Base Metal -->
+
+                <label>
+                    Base Metal
+                </label>
+
+                <div class="checks">
+
+                    <label>
+
+                        <input
+                            type="checkbox"
+                            value="Gold"
+                            onchange="renderProducts()">
+
+                        Gold
+
+                    </label>
+
+
+                    <label>
+
+                        <input
+                            type="checkbox"
+                            value="Silver"
+                            onchange="renderProducts()">
+
+                        Silver
+
+                    </label>
+
+                </div>
+
+
+
+                <!-- Polish -->
+
+                <label>
+                    Polish
+                </label>
+
+                <div class="checks">
+
+                    <label>
+
+                        <input
+                            type="checkbox"
+                            value="Gold Polish"
+                            onchange="renderProducts()">
+
+                        Gold Polish
+
+                    </label>
+
+
+                    <label>
+
+                        <input
+                            type="checkbox"
+                            value="Rose Gold"
+                            onchange="renderProducts()">
+
+                        Rose Gold
+
+                    </label>
+
+                </div>
+
+            </aside>
+
+
+
+            <!-- ================= PRODUCT GRID ================= -->
+
+            <div
+                class="product-grid"
+                id="productGrid">
+
+                <!-- Products are inserted
+                     here using JavaScript -->
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= NEWSLETTER ================= -->
+
+    <section class="newsletter">
+
+
+        <div>
+
+            <p class="eyebrow">
+                JOIN THE AURELIA CIRCLE
+            </p>
+
+            <h2>
+                Be the first to sparkle.
+            </h2>
+
+            <p>
+                Get new collection previews,
+                styling tips and exclusive offers.
+            </p>
+
+        </div>
+
+
+        <div class="subscribe">
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Your email address">
+
+            <button
+                onclick="subscribe()">
+
+                SUBSCRIBE
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+
+        <div class="footer-grid">
+
+
+            <!-- Brand -->
+
+            <div>
+
+                <div class="logo light">
+
+                    AURELIA
+
+                    <span>
+                        JEWELS
+                    </span>
+
+                </div>
+
+                <p>
+                    Fine jewellery,
+                    thoughtfully designed
+                    for every story.
+                </p>
+
+            </div>
+
+
+
+            <!-- Associate -->
+
+            <div>
+
+                <h4>
+                    ASSOCIATE WITH US
+                </h4>
+
+                <a href="#">
+                    Contact Us
+                </a>
+
+                <a href="#">
+                    About Us
+                </a>
+
+                <a href="#">
+                    Blog
+                </a>
+
+                <a href="#">
+                    Store Locator
+                </a>
+
+            </div>
+
+
+
+            <!-- Policies -->
+
+            <div>
+
+                <h4>
+                    POLICY MATTERS
+                </h4>
+
+                <a href="#">
+                    Privacy Policy
+                </a>
+
+                <a href="#">
+                    Terms & Conditions
+                </a>
+
+                <a href="#">
+                    Shipping
+                </a>
+
+                <a href="#">
+                    Returns & Exchange
+                </a>
+
+            </div>
+
+
+
+            <!-- Social -->
+
+            <div>
+
+                <h4>
+                    FOLLOW US
+                </h4>
+
+                <div class="social">
+
+                    <span>◎</span>
+                    <span>◉</span>
+                    <span>𝕏</span>
+                    <span>▶</span>
+
+                </div>
+
+                <p>
+                    © 2026 Aurelia Jewels
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- ================= CART MODAL ================= -->
+
+    <div
+        class="cart-modal"
+        id="cartModal">
+
+
+        <div class="cart-box">
+
+
+            <button
+                class="close"
+                onclick="closeCart()">
+
+                ×
+
+            </button>
+
+
+            <h2>
+                Your Bag
+            </h2>
+
+
+            <div
+                id="cartItems">
+
+                <!-- Cart products appear here -->
+
+            </div>
+
+
+            <button
+                class="dark-button full"
+                onclick="closeCart()">
+
+                CONTINUE SHOPPING
+
+            </button>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

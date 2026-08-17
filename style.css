@@ -1,0 +1,1572 @@
+/* =====================================================
+   AURELIA JEWELS - COMPLETE STYLE.CSS
+   ===================================================== */
+
+
+/* =======================
+   1. RESET
+   ======================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", Arial, sans-serif;
+    background: #fffaf7;
+    color: #302326;
+    line-height: 1.6;
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* =======================
+   2. COMMON
+   ======================= */
+
+.section {
+    padding: 90px 6%;
+}
+
+.eyebrow {
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #8a596d;
+    font-weight: 600;
+}
+
+h1,
+h2 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 48px;
+    line-height: 1.05;
+}
+
+.text-button {
+    border: none;
+    background: transparent;
+    color: #6f1d45;
+    font-weight: 600;
+}
+
+
+/* =======================
+   3. HEADER
+   ======================= */
+
+header {
+    min-height: 78px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding: 12px 6%;
+
+    background: #ffffff;
+
+    position: relative;
+    z-index: 10;
+}
+
+
+/* Logo */
+
+.logo {
+    color: #6f1d45;
+
+    font-family: Georgia, serif;
+
+    font-size: 27px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    line-height: 1;
+}
+
+.logo span {
+    display: block;
+
+    text-align: center;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 8px;
+
+    letter-spacing: 5px;
+
+    margin-top: 5px;
+}
+
+
+/* Search */
+
+.search {
+    width: 40%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 8px 5px;
+
+    border-bottom: 1px solid #aaa;
+}
+
+.search input {
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #333;
+}
+
+
+/* Header icons */
+
+.icons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+}
+
+.icons button {
+    position: relative;
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 21px;
+
+    padding: 5px;
+}
+
+#cartCount {
+    position: absolute;
+
+    top: -5px;
+    right: -7px;
+
+    width: 18px;
+    height: 18px;
+
+    border-radius: 50%;
+
+    background: #6f1d45;
+
+    color: white;
+
+    font-size: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* =======================
+   4. NAVIGATION
+   ======================= */
+
+nav {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    padding: 15px 5%;
+
+    background: #ffffff;
+
+    border-top: 1px solid #eee;
+
+    border-bottom: 1px solid #eee;
+
+    overflow-x: auto;
+
+    white-space: nowrap;
+}
+
+nav a {
+    text-decoration: none;
+
+    color: #302326;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #6f1d45;
+}
+
+
+/* =======================
+   5. HERO
+   ======================= */
+
+.hero {
+    height: 600px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: #4a3036;
+}
+
+
+/* Slides */
+
+.slide {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    padding-left: 9%;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        opacity 1s ease,
+        visibility 1s ease;
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+
+/* Different hero images */
+
+.slide:nth-child(1) {
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(30, 15, 20, 0.65),
+            rgba(30, 15, 20, 0.15)
+        ),
+        url("https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1800&q=85");
+}
+
+.slide:nth-child(2) {
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(30, 15, 20, 0.65),
+            rgba(30, 15, 20, 0.15)
+        ),
+        url("https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=1800&q=85");
+}
+
+.slide:nth-child(3) {
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(30, 15, 20, 0.65),
+            rgba(30, 15, 20, 0.15)
+        ),
+        url("https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?auto=format&fit=crop&w=1800&q=85");
+}
+
+
+/* Active slide */
+
+.slide.active {
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+/* Hero text */
+
+.hero-content {
+    max-width: 600px;
+
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: clamp(48px, 6vw, 82px);
+
+    line-height: 0.95;
+
+    margin: 20px 0;
+}
+
+.hero-content h1 em {
+    font-weight: 500;
+}
+
+.hero-content > p:not(.eyebrow) {
+    max-width: 450px;
+
+    font-size: 16px;
+
+    color: #f7eeee;
+}
+
+
+/* Hero button */
+
+.hero-content button {
+    margin-top: 28px;
+
+    padding: 14px 30px;
+
+    border: 1px solid white;
+
+    background: white;
+
+    color: #6f1d45;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+.hero-content button:hover {
+    background: transparent;
+
+    color: white;
+}
+
+
+/* Carousel dots */
+
+.dots {
+    position: absolute;
+
+    left: 9%;
+
+    bottom: 35px;
+
+    display: flex;
+
+    gap: 8px;
+
+    z-index: 5;
+}
+
+.dot {
+    width: 35px;
+
+    height: 3px;
+
+    border: none;
+
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.dot.active {
+    background: white;
+}
+
+
+/* =======================
+   6. COLLECTIONS
+   ======================= */
+
+.section-head {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: end;
+
+    gap: 30px;
+
+    margin-bottom: 50px;
+}
+
+.categories {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    overflow-x: auto;
+
+    padding: 5px 2px 15px;
+}
+
+.categories button {
+    min-width: 130px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #302326;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.category-circle {
+    width: 125px;
+
+    height: 125px;
+
+    border-radius: 50%;
+
+    background: #f4e8e3;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 42px;
+
+    color: #6f1d45;
+
+    transition: 0.3s;
+}
+
+.categories button:hover .category-circle {
+    transform: translateY(-8px);
+
+    background: #ead2dc;
+
+    box-shadow: 0 12px 25px rgba(111, 29, 69, 0.12);
+}
+
+.categories b {
+    font-size: 13px;
+
+    font-weight: 500;
+}
+
+
+/* =======================
+   7. WEDDING
+   ======================= */
+
+.wedding {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    min-height: 550px;
+
+    background: #ead8d2;
+}
+
+.wedding-content {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 70px 10%;
+}
+
+.wedding-content h2 {
+    font-size: 65px;
+
+    margin: 20px 0;
+}
+
+.wedding-content > p:not(.eyebrow) {
+    max-width: 450px;
+
+    color: #59484b;
+
+    margin-bottom: 25px;
+}
+
+.wedding-content button {
+    width: fit-content;
+
+    padding: 14px 25px;
+
+    border: none;
+
+    background: #6f1d45;
+
+    color: white;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+}
+
+.wedding-image {
+    overflow: hidden;
+}
+
+.wedding-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =======================
+   8. TRENDING LOOKS
+   ======================= */
+
+.reels {
+    display: flex;
+
+    gap: 18px;
+
+    overflow-x: auto;
+
+    padding-bottom: 15px;
+}
+
+.reel {
+    position: relative;
+
+    min-width: 230px;
+
+    height: 360px;
+
+    overflow: hidden;
+
+    border-radius: 3px;
+}
+
+.reel img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.5s;
+}
+
+.reel:hover img {
+    transform: scale(1.05);
+}
+
+.reel span {
+    position: absolute;
+
+    left: 15px;
+
+    bottom: 15px;
+
+    padding: 8px 12px;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    color: #302326;
+
+    font-size: 12px;
+}
+
+
+/* =======================
+   9. PRODUCTS
+   ======================= */
+
+.products-section {
+    padding: 90px 6%;
+
+    background: #ffffff;
+}
+
+.product-title {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: end;
+
+    gap: 30px;
+
+    margin-bottom: 45px;
+}
+
+.product-title h2 {
+    margin-top: 8px;
+}
+
+.product-title select {
+    min-width: 190px;
+
+    padding: 12px;
+
+    border: 1px solid #ddd;
+
+    background: white;
+
+    outline: none;
+}
+
+
+/* Catalog */
+
+.catalog {
+    display: grid;
+
+    grid-template-columns: 220px 1fr;
+
+    gap: 40px;
+}
+
+
+/* Filters */
+
+.catalog aside {
+    border-right: 1px solid #e3dcdc;
+
+    padding-right: 25px;
+}
+
+.catalog aside h3 {
+    font-size: 14px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 30px;
+}
+
+.catalog aside > label {
+    display: block;
+
+    margin-top: 25px;
+
+    margin-bottom: 10px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+.catalog aside select {
+    width: 100%;
+
+    padding: 10px;
+
+    border: 1px solid #ddd;
+
+    background: white;
+
+    outline: none;
+}
+
+#priceRange {
+    width: 100%;
+
+    accent-color: #6f1d45;
+}
+
+.range {
+    font-size: 12px;
+
+    color: #777;
+}
+
+.checks label {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin: 8px 0;
+
+    font-size: 13px;
+}
+
+.checks input {
+    accent-color: #6f1d45;
+}
+
+
+/* Product grid */
+
+.product-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 30px 20px;
+}
+
+
+/* Product card */
+
+.product {
+    position: relative;
+
+    background: #fff;
+
+    overflow: hidden;
+}
+
+.product-image {
+    position: relative;
+
+    overflow: hidden;
+
+    background: #f4eeee;
+
+    aspect-ratio: 0.85;
+}
+
+.product-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.5s;
+}
+
+.product:hover .product-image img {
+    transform: scale(1.04);
+}
+
+
+/* Discount */
+
+.discount {
+    position: absolute;
+
+    top: 12px;
+
+    left: 12px;
+
+    padding: 5px 9px;
+
+    background: #6f1d45;
+
+    color: white;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+}
+
+
+/* Wishlist */
+
+.product-wish {
+    position: absolute;
+
+    top: 10px;
+
+    right: 10px;
+
+    width: 35px;
+
+    height: 35px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    font-size: 18px;
+}
+
+
+/* Product information */
+
+.product-info {
+    padding: 14px 3px;
+}
+
+.product-info h3 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 22px;
+
+    font-weight: 600;
+}
+
+.product-category {
+    margin-top: 4px;
+
+    font-size: 11px;
+
+    color: #888;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+.product-rating {
+    margin-top: 7px;
+
+    font-size: 12px;
+
+    color: #76505f;
+}
+
+.price {
+    margin-top: 7px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    color: #6f1d45;
+}
+
+.old-price {
+    margin-left: 7px;
+
+    color: #999;
+
+    text-decoration: line-through;
+
+    font-weight: 400;
+}
+
+.add-button {
+    width: 100%;
+
+    margin-top: 12px;
+
+    padding: 11px;
+
+    border: 1px solid #6f1d45;
+
+    background: transparent;
+
+    color: #6f1d45;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+.add-button:hover {
+    background: #6f1d45;
+
+    color: white;
+}
+
+
+/* No products */
+
+.no-products {
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+    padding: 60px 10px;
+
+    color: #777;
+}
+
+
+/* =======================
+   10. NEWSLETTER
+   ======================= */
+
+.newsletter {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 40px;
+
+    padding: 70px 8%;
+
+    background: #f3e5e1;
+}
+
+.newsletter h2 {
+    margin: 10px 0;
+
+    font-size: 45px;
+}
+
+.newsletter > div:first-child p:last-child {
+    color: #66565a;
+
+    max-width: 500px;
+}
+
+.subscribe {
+    display: flex;
+
+    min-width: 400px;
+
+    border-bottom: 1px solid #6f1d45;
+}
+
+.subscribe input {
+    flex: 1;
+
+    padding: 13px 5px;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+}
+
+.subscribe button {
+    padding: 12px 18px;
+
+    border: none;
+
+    background: #6f1d45;
+
+    color: white;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =======================
+   11. FOOTER
+   ======================= */
+
+footer {
+    padding: 70px 7% 35px;
+
+    background: #302326;
+
+    color: white;
+}
+
+.footer-grid {
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr 1fr;
+
+    gap: 50px;
+}
+
+.logo.light {
+    color: #ffffff;
+
+    margin-bottom: 20px;
+}
+
+.footer-grid > div:first-child p {
+    max-width: 260px;
+
+    color: #cbbfc1;
+
+    font-size: 13px;
+}
+
+.footer-grid h4 {
+    margin-bottom: 18px;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+}
+
+.footer-grid a {
+    display: block;
+
+    margin-bottom: 10px;
+
+    text-decoration: none;
+
+    color: #cbbfc1;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+.footer-grid a:hover {
+    color: white;
+}
+
+.social {
+    display: flex;
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+.social span {
+    width: 35px;
+
+    height: 35px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid #6c5b60;
+
+    border-radius: 50%;
+
+    font-size: 15px;
+}
+
+.footer-grid > div:last-child p {
+    color: #9f9295;
+
+    font-size: 11px;
+}
+
+
+/* =======================
+   12. CART MODAL
+   ======================= */
+
+.cart-modal {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 100;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(20, 10, 15, 0.6);
+}
+
+.cart-modal.show {
+    display: flex;
+}
+
+.cart-box {
+    position: relative;
+
+    width: min(500px, 100%);
+
+    max-height: 80vh;
+
+    overflow-y: auto;
+
+    padding: 35px;
+
+    background: white;
+}
+
+.cart-box h2 {
+    margin-bottom: 25px;
+}
+
+.close {
+    position: absolute;
+
+    top: 12px;
+
+    right: 15px;
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 28px;
+}
+
+.cart-item {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item-info {
+    flex: 1;
+}
+
+.cart-item-info h4 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 19px;
+}
+
+.cart-item-info p {
+    color: #6f1d45;
+
+    font-size: 13px;
+}
+
+.remove-item {
+    border: none;
+
+    background: transparent;
+
+    color: #8b5a68;
+
+    font-size: 12px;
+}
+
+.dark-button {
+    padding: 13px 22px;
+
+    border: none;
+
+    background: #302326;
+
+    color: white;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+}
+
+.full {
+    width: 100%;
+
+    margin-top: 20px;
+}
+
+
+/* =======================
+   13. SCROLLBAR
+   ======================= */
+
+::-webkit-scrollbar {
+    width: 8px;
+
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f5eeee;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #b795a1;
+
+    border-radius: 10px;
+}
+
+
+/* =======================
+   14. TABLET
+   ======================= */
+
+@media (max-width: 1000px) {
+
+    header {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    nav {
+        gap: 20px;
+    }
+
+    .section,
+    .products-section {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .categories {
+        justify-content: flex-start;
+    }
+
+    .catalog {
+        grid-template-columns: 180px 1fr;
+
+        gap: 25px;
+    }
+
+    .product-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .footer-grid {
+        grid-template-columns:
+            1fr 1fr;
+    }
+}
+
+
+/* =======================
+   15. MOBILE
+   ======================= */
+
+@media (max-width: 768px) {
+
+    /* Header */
+
+    header {
+        min-height: 65px;
+
+        gap: 10px;
+
+        padding: 10px 15px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .logo span {
+        font-size: 6px;
+
+        letter-spacing: 3px;
+    }
+
+    .search {
+        width: 38%;
+
+        font-size: 12px;
+    }
+
+    .search input {
+        font-size: 11px;
+    }
+
+    .icons {
+        gap: 5px;
+    }
+
+    .icons button {
+        font-size: 17px;
+    }
+
+
+    /* Navigation */
+
+    nav {
+        justify-content: flex-start;
+
+        gap: 20px;
+
+        padding: 12px 15px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        height: 520px;
+    }
+
+    .slide {
+        padding: 0 25px;
+
+        align-items: flex-end;
+
+        padding-bottom: 80px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 52px;
+    }
+
+    .hero-content > p:not(.eyebrow) {
+        font-size: 14px;
+    }
+
+    .dots {
+        left: 25px;
+
+        bottom: 30px;
+    }
+
+
+    /* Sections */
+
+    .section,
+    .products-section {
+        padding: 60px 20px;
+    }
+
+    h2 {
+        font-size: 38px;
+    }
+
+    .section-head {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        margin-bottom: 35px;
+    }
+
+
+    /* Collections */
+
+    .categories {
+        justify-content: flex-start;
+
+        gap: 20px;
+    }
+
+    .category-circle {
+        width: 95px;
+
+        height: 95px;
+
+        font-size: 32px;
+    }
+
+    .categories button {
+        min-width: 105px;
+    }
+
+
+    /* Wedding */
+
+    .wedding {
+        grid-template-columns: 1fr;
+    }
+
+    .wedding-content {
+        padding: 60px 25px;
+    }
+
+    .wedding-content h2 {
+        font-size: 50px;
+    }
+
+    .wedding-image {
+        height: 400px;
+    }
+
+
+    /* Trending */
+
+    .reel {
+        min-width: 190px;
+
+        height: 300px;
+    }
+
+
+    /* Products */
+
+    .product-title {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .product-title select {
+        width: 100%;
+    }
+
+    .catalog {
+        grid-template-columns: 1fr;
+    }
+
+    .catalog aside {
+        border-right: none;
+
+        border-bottom: 1px solid #e3dcdc;
+
+        padding-right: 0;
+
+        padding-bottom: 25px;
+    }
+
+    .product-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 20px 12px;
+    }
+
+    .product-info h3 {
+        font-size: 18px;
+    }
+
+
+    /* Newsletter */
+
+    .newsletter {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 55px 25px;
+    }
+
+    .newsletter h2 {
+        font-size: 38px;
+    }
+
+    .subscribe {
+        width: 100%;
+
+        min-width: 0;
+    }
+
+
+    /* Footer */
+
+    footer {
+        padding: 55px 25px 30px;
+    }
+
+    .footer-grid {
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 40px 25px;
+    }
+
+}
+
+
+/* =======================
+   16. SMALL MOBILE
+   ======================= */
+
+@media (max-width: 480px) {
+
+    header {
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        order: 1;
+    }
+
+    .icons {
+        order: 2;
+    }
+
+    .search {
+        order: 3;
+
+        width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 45px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-image {
+        aspect-ratio: 1 / 1.1;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .subscribe {
+        flex-direction: column;
+
+        border-bottom: none;
+
+        gap: 10px;
+    }
+
+    .subscribe input {
+        border-bottom: 1px solid #6f1d45;
+    }
+
+    .subscribe button {
+        width: 100%;
+    }
+}
