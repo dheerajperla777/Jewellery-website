@@ -1,4 +1,4 @@
-# Soumitha Jewels
+# AURELIA Jewels
 
 A responsive jewellery e-commerce website designed and developed using HTML, CSS and JavaScript.
 
